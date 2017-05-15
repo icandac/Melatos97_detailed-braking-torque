@@ -1,0 +1,98 @@
+%% Created by Maple 18.00, Linux
+%% Source Worksheet: blala.mw
+%% Generated: Tue Sep 27 16:48:27 EEST 2016
+\documentclass{article}
+\usepackage{maplestd2e}
+\def\emptyline{\vspace{12pt}}
+\begin{document}
+\pagestyle{empty}
+\DefineParaStyle{Maple Heading 1}
+\DefineParaStyle{Maple Text Output}
+\DefineParaStyle{Maple Dash Item}
+\DefineParaStyle{Maple Bullet Item}
+\DefineParaStyle{Maple Normal}
+\DefineParaStyle{Maple Heading 4}
+\DefineParaStyle{Maple Heading 3}
+\DefineParaStyle{Maple Heading 2}
+\DefineParaStyle{Maple Warning}
+\DefineParaStyle{Maple Title}
+\DefineParaStyle{Maple Error}
+\DefineCharStyle{Maple Hyperlink}
+\DefineCharStyle{Maple 2D Math}
+\DefineCharStyle{Maple Maple Input}
+\DefineCharStyle{Maple 2D Output}
+\DefineCharStyle{Maple 2D Input}
+\mapleinline{inert}{2d}{term_1 := x_0^2/(x_0*HankelH1(2, x_0)+HankelH1(1, x_0)); 1}{\[\displaystyle \]}
+\mapleinline{inert}{2d}{term_1 := x_0^2/(x_0*HankelH1(2, x_0)+HankelH1(1, x_0)); 1}{\[\displaystyle \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{x_0^2/(x_0*HankelH1(2, x_0)+HankelH1(1, x_0))}{\[\displaystyle {\frac {{{\it x\_0}}^{2}}{{\it x\_0}\,{{\sl H}^{(1)}_{2}\left({\it x\_0}\right)}+{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{term_2 := x_0/HankelH1(1, x_0); 1}{\[\displaystyle \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{x_0/HankelH1(1, x_0)}{\[\displaystyle {\frac {{\it x\_0}}{{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{const := B_0*sin(a)*exp(I*(x+\etha))/(2*x); 1}{\[\displaystyle \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(1/2)*B_0*sin(a)*exp(I*(x+\etha))/x}{\[\displaystyle 1/2\,{\frac {{\it B\_0}\,\sin \left( a \right) {{\rm e}^{i \left( x+{\it etha} \right) }}}{x}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{B_theta := I*const*(term_1-term_2)*cos(a); 1}{\[\displaystyle \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(1/2*I)*B_0*sin(a)*exp(I*(x+etha))*(x_0^2/(x_0*HankelH1(2, x_0)+HankelH1(1, x_0))-x_0/HankelH1(1, x_0))*cos(a)/x}{\[\displaystyle {\frac {i/2{\it B\_0}\,\sin \left( a \right) {{\rm e}^{i \left( x+{\it etha} \right) }}\\
+\mbox{}\cos \left( a \right) }{x} \left( {\frac {{{\it x\_0}}^{2}}{{\it x\_0}\,{{\sl H}^{(1)}_{2}\left({\it x\_0}\right)}+{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}}-{\frac {{\it x\_0}}{{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}} \right) }\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{B_phi := -const*(term_1*cos(2*a)-term_2); 1}{\[\displaystyle \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{-(1/2)*B_0*sin(a)*exp(I*(x+etha))*(x_0^2*cos(2*a)/(x_0*HankelH1(2, x_0)+HankelH1(1, x_0))-x_0/HankelH1(1, x_0))/x}{\[\displaystyle -1/2\,{\frac {{\it B\_0}\,\sin \left( a \right) {{\rm e}^{i \left( x+{\it etha} \right) }}\\
+\mbox{}}{x} \left( {\frac {{{\it x\_0}}^{2}\cos \left( 2\,a \right) }{{\it x\_0}\,{{\sl H}^{(1)}_{2}\left({\it x\_0}\right)}+{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}}-{\frac {{\it x\_0}}{{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}} \right) }\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{const2 := eps_0*c^4*x^2/w^2; 1}{\[\displaystyle \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{eps_0*c^4*x^2/w^2}{\[\displaystyle {\frac {{\it eps\_0}\,{c}^{4}{x}^{2}}{{w}^{2}}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{Mom_In*w*wdot = B_theta^2*const2+B_phi^2; 1}{\[\displaystyle \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{Mom_In*w*wdot = -(1/4)*B_0^2*sin(a)^2*(exp(I*(x+etha)))^2*(x_0^2/(x_0*HankelH1(2, x_0)+HankelH1(1, x_0))-x_0/HankelH1(1, x_0))^2*cos(a)^2*eps_0*c^4/w^2+(1/4)*B_0^2*sin(a)^2*(exp(I*(x+etha)))^2*(x_0^2*cos(2*a)/(x_0*HankelH1(2, x_0)+HankelH1(1, x_0))-x_0/HankelH1(1, x_0))^2/x^2}{\[\displaystyle {\it Mom\_In}\,w{\it wdot}=-1/4\,{\frac {{{\it B\_0}}^{2} \left( \sin \left( a \right)  \right) ^{2}\\
+\mbox{} \left( {{\rm e}^{i \left( x+{\it etha} \right) }} \right) ^{2} \left( \cos \left( a \right)  \right) ^{2}{\it eps\_0}\,\\
+\mbox{}{c}^{4}}{{w}^{2}} \left( {\frac {{{\it x\_0}}^{2}}{{\it x\_0}\,{{\sl H}^{(1)}_{2}\left({\it x\_0}\right)}+{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}}-{\frac {{\it x\_0}}{{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}} \right) ^{2}}+1/4\,{\frac {{{\it B\_0}}^{2} \left( \sin \left( a \right)  \right) ^{2} \left( {{\rm e}^{i \left( x+{\it etha} \right) }} \right) ^{2}}{{x}^{2}} \left( {\frac {{{\it x\_0}}^{2}\cos \left( 2\,a \right) }{{\it x\_0}\,{{\sl H}^{(1)}_{2}\left({\it x\_0}\right)}+{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}}-{\frac {{\it x\_0}}{{{\sl H}^{(1)}_{1}\left({\it x\_0}\right)}}} \right) ^{2}}\]}
+\end{maplelatex}
+\end{maplegroup}
+\vspace{2pt}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+Let's define the first term with numerator $x_{0}^2$ as t and the second one as z. Then, without the constants, the integral turns into this form:}\end{Maple Normal}
+
+}\end{Maple Normal}
+
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+}\end{Maple Normal}
+}\end{Maple Normal}
+\mapleinline{inert}{2d}{int((-(t-z)^2*cos(theta)^2+(t*cos(2*theta)-z)^2)*sin(theta), theta = 0 .. Pi); 1} {\[\displaystyle \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(4/15)*t^2+(8/3)*t*z+(4/3)*z^2}{\[\displaystyle {\frac {4\,{t}^{2}}{15}}+8/3\,tz+4/3\,{z}^{2}\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+\end{document}
